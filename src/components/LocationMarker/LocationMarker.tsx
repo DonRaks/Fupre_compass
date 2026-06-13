@@ -2,12 +2,7 @@ import React from 'react';
 import { Marker, Popup, Tooltip } from 'react-leaflet';
 import L from 'leaflet';
 import { Building } from '../../algorithms/graph';
-import {
-  buildingIcon,
-  startPointIcon,
-  endPointIcon,
-  userLocationIcon,
-} from '../../utils/mapUtils';
+import { userLocationIcon } from '../../utils/mapUtils';
 import { getBuildingIcon } from '../../utils/helpers';
 
 interface BuildingMarkerProps {
@@ -25,13 +20,8 @@ function BuildingMarker({
   isEnd = false,
   isSelected = false,
 }: BuildingMarkerProps) {
-  const getIcon = () => {
-    if (isStart) return startPointIcon;
-    if (isEnd) return endPointIcon;
-    return buildingIcon;
-  };
-
-  const handleClick = () => {
+  const handleClick = (e: L.LeafletMouseEvent) => {
+    e.originalEvent.stopPropagation();
     if (onClick) {
       onClick(building);
     }
@@ -46,7 +36,7 @@ function BuildingMarker({
 
   const customIcon = L.divIcon({
     className: 'custom-marker',
-    html: `<div class="w-8 h-8 ${getMarkerColor()} rounded-full flex items-center justify-center shadow-lg border-2 border-white transition-all cursor-pointer">
+    html: `<div class="marker-inner w-8 h-8 ${getMarkerColor()} rounded-full flex items-center justify-center shadow-lg border-2 border-white transition-all cursor-pointer">
       <span class="text-white text-sm">${getBuildingIcon(building.type)}</span>
     </div>`,
     iconSize: [32, 32],
@@ -58,6 +48,7 @@ function BuildingMarker({
     <Marker
       position={[building.lat, building.lng]}
       icon={customIcon}
+      bubblingMouseEvents={false}
       eventHandlers={{
         click: handleClick,
       }}
@@ -72,7 +63,10 @@ function BuildingMarker({
             </span>
           </div>
           <button
-            onClick={handleClick}
+            onClick={(e) => {
+              e.stopPropagation();
+              handleClick({ originalEvent: e } as L.LeafletMouseEvent);
+            }}
             className="mt-2 w-full px-3 py-1.5 bg-primary-600 text-white text-sm rounded hover:bg-primary-700 transition-colors"
           >
             Set as waypoint
@@ -83,7 +77,6 @@ function BuildingMarker({
         direction="top"
         offset={[0, -20]}
         permanent={false}
-        sticky={true}
       >
         {building.name}
       </Tooltip>

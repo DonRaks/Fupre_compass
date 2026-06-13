@@ -64,13 +64,18 @@
     justify-content: center;
     background: transparent !important;
     border: none !important;
+    pointer-events: auto;
   }
 
+  .custom-marker .marker-inner,
   .custom-marker > div {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    pointer-events: auto;
   }
 
+  .custom-marker:hover .marker-inner,
   .custom-marker:hover > div,
+  .leaflet-marker-icon:hover .custom-marker .marker-inner,
   .leaflet-marker-icon:hover .custom-marker > div {
     transform: scale(1.2);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
@@ -78,10 +83,15 @@
 
   .leaflet-marker-icon {
     cursor: pointer !important;
+    pointer-events: auto !important;
   }
 
   .leaflet-marker-icon:hover {
     z-index: 1000 !important;
+  }
+
+  .leaflet-popup-close-button {
+    pointer-events: auto;
   }
 
   .leaflet-tooltip {
