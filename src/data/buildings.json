@@ -1,0 +1,122 @@
+[
+  {
+    "id": "main-gate",
+    "name": "Main Gate",
+    "lat": 5.5527,
+    "lng": 5.7601,
+    "description": "Main entrance to FUPRE campus",
+    "type": "gate"
+  },
+  {
+    "id": "admin-block",
+    "name": "Administrative Block",
+    "lat": 5.5532,
+    "lng": 5.7608,
+    "description": "Central administrative building housing the Vice Chancellor's office",
+    "type": "building"
+  },
+  {
+    "id": "library",
+    "name": "University Library",
+    "lat": 5.5538,
+    "lng": 5.7615,
+    "description": "Main library with extensive academic resources",
+    "type": "building"
+  },
+  {
+    "id": "science-complex",
+    "name": "Science Complex",
+    "lat": 5.5545,
+    "lng": 5.7622,
+    "description": "Housing laboratories and lecture halls for science departments",
+    "type": "building"
+  },
+  {
+    "id": "engineering-block",
+    "name": "Engineering Block",
+    "lat": 5.5551,
+    "lng": 5.7628,
+    "description": "College of Engineering building with workshops",
+    "type": "building"
+  },
+  {
+    "id": "student-center",
+    "name": "Student Center",
+    "lat": 5.5535,
+    "lng": 5.7635,
+    "description": "Center for student activities and services",
+    "type": "building"
+  },
+  {
+    "id": "lecture-theater",
+    "name": "Lecture Theater",
+    "lat": 5.5542,
+    "lng": 5.7640,
+    "description": "Main lecture theater with 500 seats capacity",
+    "type": "building"
+  },
+  {
+    "id": "health-center",
+    "name": "Health Center",
+    "lat": 5.5520,
+    "lng": 5.7618,
+    "description": "Campus medical facility for students and staff",
+    "type": "building"
+  },
+  {
+    "id": "hostel-a",
+    "name": "Hostel Block A",
+    "lat": 5.5555,
+    "lng": 5.7638,
+    "description": "Male student hostel",
+    "type": "hostel"
+  },
+  {
+    "id": "hostel-b",
+    "name": "Hostel Block B",
+    "lat": 5.5558,
+    "lng": 5.7645,
+    "description": "Female student hostel",
+    "type": "hostel"
+  },
+  {
+    "id": "cafeteria",
+    "name": "Central Cafeteria",
+    "lat": 5.5548,
+    "lng": 5.7632,
+    "description": "Main dining facility",
+    "type": "building"
+  },
+  {
+    "id": "sports-complex",
+    "name": "Sports Complex",
+    "lat": 5.5562,
+    "lng": 5.7635,
+    "description": "Sports facilities including football field and courts",
+    "type": "recreation"
+  },
+  {
+    "id": "auditorium",
+    "name": "University Auditorium",
+    "lat": 5.5528,
+    "lng": 5.7648,
+    "description": "1000-seat auditorium for events and convocations",
+    "type": "building"
+  },
+  {
+    "id": "ict-center",
+    "name": "ICT Center",
+    "lat": 5.5533,
+    "lng": 5.7622,
+    "description": "Computer labs and IT services",
+    "type": "building"
+  },
+  {
+    "id": "water-treatment",
+    "name": "Water Treatment Plant",
+    "lat": 5.5515,
+    "lng": 5.7625,
+    "description": "Campus water treatment facility",
+    "type": "utility"
+  }
+]

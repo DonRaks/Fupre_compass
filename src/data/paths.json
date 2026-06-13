@@ -1,0 +1,162 @@
+[
+  {
+    "id": "path-1",
+    "from": "main-gate",
+    "to": "admin-block",
+    "distance": 120,
+    "type": "pedestrian",
+    "description": "Main walkway from gate to admin"
+  },
+  {
+    "id": "path-2",
+    "from": "admin-block",
+    "to": "library",
+    "distance": 100,
+    "type": "pedestrian",
+    "description": "Covered walkway to library"
+  },
+  {
+    "id": "path-3",
+    "from": "library",
+    "to": "science-complex",
+    "distance": 150,
+    "type": "pedestrian",
+    "description": "Path to science complex"
+  },
+  {
+    "id": "path-4",
+    "from": "science-complex",
+    "to": "engineering-block",
+    "distance": 80,
+    "type": "pedestrian",
+    "description": "Connecting path between academic blocks"
+  },
+  {
+    "id": "path-5",
+    "from": "engineering-block",
+    "to": "hostel-a",
+    "distance": 100,
+    "type": "pedestrian",
+    "description": "Path to hostel area"
+  },
+  {
+    "id": "path-6",
+    "from": "hostel-a",
+    "to": "hostel-b",
+    "distance": 60,
+    "type": "pedestrian",
+    "description": "Path between hostels"
+  },
+  {
+    "id": "path-7",
+    "from": "hostel-b",
+    "to": "sports-complex",
+    "distance": 70,
+    "type": "pedestrian",
+    "description": "Path to sports facilities"
+  },
+  {
+    "id": "path-8",
+    "from": "sports-complex",
+    "to": "cafeteria",
+    "distance": 90,
+    "type": "pedestrian",
+    "description": "Path from sports to cafeteria"
+  },
+  {
+    "id": "path-9",
+    "from": "cafeteria",
+    "to": "lecture-theater",
+    "distance": 50,
+    "type": "pedestrian",
+    "description": "Short path to lecture theater"
+  },
+  {
+    "id": "path-10",
+    "from": "lecture-theater",
+    "to": "student-center",
+    "distance": 80,
+    "type": "pedestrian",
+    "description": "Path to student center"
+  },
+  {
+    "id": "path-11",
+    "from": "student-center",
+    "to": "ict-center",
+    "distance": 100,
+    "type": "pedestrian",
+    "description": "Path to ICT center"
+  },
+  {
+    "id": "path-12",
+    "from": "ict-center",
+    "to": "library",
+    "distance": 70,
+    "type": "pedestrian",
+    "description": "Connecting path"
+  },
+  {
+    "id": "path-13",
+    "from": "admin-block",
+    "to": "health-center",
+    "distance": 90,
+    "type": "pedestrian",
+    "description": "Path to health center"
+  },
+  {
+    "id": "path-14",
+    "from": "health-center",
+    "to": "water-treatment",
+    "distance": 80,
+    "type": "pedestrian",
+    "description": "Utility path"
+  },
+  {
+    "id": "path-15",
+    "from": "health-center",
+    "to": "ict-center",
+    "distance": 60,
+    "type": "pedestrian",
+    "description": "Connecting path"
+  },
+  {
+    "id": "path-16",
+    "from": "lecture-theater",
+    "to": "auditorium",
+    "distance": 100,
+    "type": "pedestrian",
+    "description": "Path to auditorium"
+  },
+  {
+    "id": "path-17",
+    "from": "auditorium",
+    "to": "main-gate",
+    "distance": 150,
+    "type": "pedestrian",
+    "description": "Alternative route from auditorium"
+  },
+  {
+    "id": "path-18",
+    "from": "student-center",
+    "to": "science-complex",
+    "distance": 120,
+    "type": "pedestrian",
+    "description": "Cross-campus path"
+  },
+  {
+    "id": "path-19",
+    "from": "cafeteria",
+    "to": "engineering-block",
+    "distance": 70,
+    "type": "pedestrian",
+    "description": "Direct path to engineering"
+  },
+  {
+    "id": "path-20",
+    "from": "hostel-a",
+    "to": "sports-complex",
+    "distance": 50,
+    "type": "pedestrian",
+    "description": "Quick access to sports"
+  }
+]

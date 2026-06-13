@@ -1,0 +1,42 @@
+[
+  {
+    "id": "landmark-1",
+    "name": "Foundation Stone",
+    "lat": 5.5530,
+    "lng": 5.7605,
+    "description": "Historical monument marking FUPRE's establishment",
+    "type": "monument"
+  },
+  {
+    "id": "landmark-2",
+    "name": "Clock Tower",
+    "lat": 5.5535,
+    "lng": 5.7610,
+    "description": "Historic clock tower built in 2007",
+    "type": "monument"
+  },
+  {
+    "id": "landmark-3",
+    "name": "Garden of Learning",
+    "lat": 5.5540,
+    "lng": 5.7620,
+    "description": "Beautiful garden with rare plant species",
+    "type": "garden"
+  },
+  {
+    "id": "landmark-4",
+    "name": "Petroleum Museum",
+    "lat": 5.5548,
+    "lng": 5.7625,
+    "description": "Museum showcasing petroleum industry history",
+    "type": "museum"
+  },
+  {
+    "id": "landmark-5",
+    "name": "Solar Panel Array",
+    "lat": 5.5522,
+    "lng": 5.7620,
+    "description": "Renewable energy installation visible from paths",
+    "type": "infrastructure"
+  }
+]
