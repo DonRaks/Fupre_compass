@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Search, MapPin, X, ArrowRight, Navigation } from 'lucide-react';
+import { MapPin, X, ArrowRight, Navigation } from 'lucide-react';
 import { Building } from '../../algorithms/graph';
 import { useNavigation } from '../../context/NavigationContext';
 import navigationService from '../../services/navigationService';

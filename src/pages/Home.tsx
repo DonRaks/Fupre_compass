@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { MapPin, Compass, Layers, Locate, Menu, X } from 'lucide-react';
 import Map from '../components/Map/Map';
 import Sidebar from '../components/Sidebar/Sidebar';
@@ -117,7 +117,6 @@ function Home() {
 
           <RouteDisplay
             route={route}
-            showWaypoints={true}
             selectedBuilding={selectedBuilding}
             onWaypointClick={handleBuildingClick}
           />

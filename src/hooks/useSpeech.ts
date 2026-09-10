@@ -25,14 +25,6 @@ export function useSpeech(): UseSpeechReturn {
   useEffect(() => {
     if (!isSupported) return;
 
-    const handleEnd = () => {
-      setIsSpeaking(false);
-      setIsPaused(false);
-    };
-
-    const handlePause = () => setIsPaused(true);
-    const handleResume = () => setIsPaused(false);
-
     window.speechSynthesis.onvoiceschanged = () => {};
 
     return () => {

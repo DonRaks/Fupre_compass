@@ -1,7 +1,8 @@
 import React from 'react';
 import { MapPin, Clock, Route, Volume2, VolumeX, X, ChevronDown, ChevronUp } from 'lucide-react';
-import { Building, PathResult } from '../../algorithms/dijkstra';
-import RouteDisplay, { RouteInstructions } from '../RouteDisplay/RouteDisplay';
+import { Building } from '../../algorithms/graph';
+import { PathResult } from '../../algorithms/dijkstra';
+import { RouteInstructions } from '../RouteDisplay/RouteDisplay';
 import { formatDistance, formatDuration, calculateRouteDuration } from '../../utils/mapUtils';
 import { useNavigation } from '../../context/NavigationContext';
 import { useSpeech } from '../../hooks/useSpeech';
@@ -12,7 +13,7 @@ interface SidebarProps {
   onBuildingClick?: (building: Building) => void;
 }
 
-function Sidebar({ isOpen = true, onClose, onBuildingClick }: SidebarProps) {
+function Sidebar({ isOpen = true, onClose }: SidebarProps) {
   const { startBuilding, endBuilding, route, clearRoute } = useNavigation();
   const { narrateRoute, stop, isSpeaking: isNarrating } = useSpeech();
 
@@ -73,9 +74,6 @@ function Sidebar({ isOpen = true, onClose, onBuildingClick }: SidebarProps) {
           startBuilding={startBuilding}
           endBuilding={endBuilding}
           onClear={clearRoute}
-          onBuildingClick={onBuildingClick}
-          onNarrate={handleNarrate}
-          isNarrating={isNarrating}
         />
       ) : (
         <div className="flex-1 flex flex-col items-center justify-center p-6 text-center">
@@ -98,9 +96,6 @@ interface RouteInfoProps {
   startBuilding: Building;
   endBuilding: Building;
   onClear?: () => void;
-  onBuildingClick?: (building: Building) => void;
-  onNarrate?: () => void;
-  isNarrating?: boolean;
 }
 
 function RouteInfo({
@@ -108,9 +103,6 @@ function RouteInfo({
   startBuilding,
   endBuilding,
   onClear,
-  onBuildingClick,
-  onNarrate,
-  isNarrating = false,
 }: RouteInfoProps) {
   const [isExpanded, setIsExpanded] = React.useState(true);
 

@@ -1,6 +1,6 @@
-import { campusGraph, Graph, GraphNode, Building } from './graph';
+import { campusGraph, Graph, Building } from './graph';
 
-interface PathResult {
+export interface PathResult {
   path: string[];
   distance: number;
   buildings: Building[];
@@ -143,8 +143,7 @@ export function dijkstra(
 export function findAllPaths(
   graph: Graph,
   startId: string,
-  endId: string,
-  maxPaths: number = 3
+  endId: string
 ): PathResult[] {
   const results: PathResult[] = [];
 
@@ -204,4 +203,4 @@ export function calculateHaversineDistance(
   return R * c;
 }
 
-export { campusGraph, type PathResult };
+export { campusGraph };

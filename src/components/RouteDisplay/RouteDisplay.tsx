@@ -1,4 +1,3 @@
-import React from 'react';
 import { Polyline } from 'react-leaflet';
 import L from 'leaflet';
 import { PathResult } from '../../algorithms/dijkstra';
@@ -8,14 +7,12 @@ import { buildingToLatLng } from '../../utils/mapUtils';
 
 interface RouteDisplayProps {
   route: PathResult | null;
-  showWaypoints?: boolean;
   selectedBuilding?: Building | null;
   onWaypointClick?: (building: Building) => void;
 }
 
 function RouteDisplay({
   route,
-  showWaypoints = true,
   selectedBuilding,
   onWaypointClick,
 }: RouteDisplayProps) {
@@ -39,7 +36,7 @@ function RouteDisplay({
 
   return (
     <>
-      {coordinates.slice(0, -1).map((coord, index) => (
+      {coordinates.slice(0, -1).map((_, index) => (
         <Polyline
           key={`segment-${index}`}
           positions={[

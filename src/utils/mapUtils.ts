@@ -1,5 +1,6 @@
 import L from 'leaflet';
-import { Building, PathResult } from '../algorithms/dijkstra';
+import { Building } from '../algorithms/graph';
+import { PathResult } from '../algorithms/dijkstra';
 
 export const FUPRE_BOUNDS = {
   north: 5.558,

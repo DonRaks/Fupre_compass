@@ -1,4 +1,3 @@
-import React from 'react';
 import { Marker, Popup, Tooltip } from 'react-leaflet';
 import L from 'leaflet';
 import { Building } from '../../algorithms/graph';
@@ -65,11 +64,13 @@ function BuildingMarker({
           <button
             onClick={(e) => {
               e.stopPropagation();
-              handleClick({ originalEvent: e } as L.LeafletMouseEvent);
+              if (onClick) {
+                onClick(building);
+              }
             }}
             className="mt-2 w-full px-3 py-1.5 bg-primary-600 text-white text-sm rounded hover:bg-primary-700 transition-colors"
           >
-            Set as waypoint
+            Select building
           </button>
         </div>
       </Popup>
